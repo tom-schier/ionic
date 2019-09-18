@@ -7,6 +7,21 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  mydata: number[];
+
+  constructor() {
+    this.fillArrayWithRandomNumbers();
+  }
+
+  fillArrayWithRandomNumbers() {
+    this.mydata = [];
+    for(let i = 0; i < 10; i++) {
+        this.mydata.push(Math.random());
+    }
+  }
+
+  changeData() {
+      this.fillArrayWithRandomNumbers();
+  }
 
 }
